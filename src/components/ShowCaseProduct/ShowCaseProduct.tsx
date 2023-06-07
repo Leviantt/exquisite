@@ -1,7 +1,11 @@
 import { Card, CardMedia, Grid } from '@mui/material';
 import styles from './ShowCaseProduct.module.css';
 
-export const ShowCaseProduct = () => {
+type ShowCaseProductProps = {
+  imageUrl: string;
+};
+
+export const ShowCaseProduct = ({ imageUrl }: ShowCaseProductProps) => {
   return (
     <>
       <Grid item xs={12} md={6} lg={3}>
@@ -13,7 +17,7 @@ export const ShowCaseProduct = () => {
         >
           <div className={styles.productImg}>
             <CardMedia
-              image="./images/product-1.jpg"
+              image={imageUrl}
               title=""
               sx={{
                 height: '40vh',
