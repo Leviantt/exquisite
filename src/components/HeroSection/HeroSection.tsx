@@ -9,12 +9,15 @@ export const HeroSection = () => {
       <div className={styles.picturesContainer}>
         <div className={styles.backgroundPicture}>
           <Image
-            src="./images/home__hero-back.jpg"
+            src="/public/images/home__hero-back.jpg"
             alt="Девушка в зеркале"
           />
         </div>
         <div className={styles.frontPicture}>
-          <Image src="./images/home__hero-front.jpg" alt="Рука с кольцами" />
+          <Image
+            src="/public/images/home__hero-front.jpg"
+            alt="Рука с кольцами"
+          />
         </div>
       </div>
       <div className={styles.infoContainer}>
