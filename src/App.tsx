@@ -12,13 +12,10 @@ import { Register } from './pages/Register';
 import { DetailedPage } from './pages/DetailedPage';
 import { Account } from './pages/Account';
 import { Cart } from './pages/Cart';
-import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <>
-      <Toaster />
-
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

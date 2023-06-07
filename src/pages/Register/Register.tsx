@@ -8,7 +8,6 @@ import {
 import { CustomContainer } from './styles';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ChangeEvent, useState } from 'react';
-import { toast } from 'react-hot-toast';
 import { register } from '../../lib/api';
 import { useAuth } from '../../hooks/auth/useAuth';
 
@@ -40,8 +39,9 @@ export const Register = () => {
       newUser.password.trim().length < 3 ||
       newUser.name.length < 2 ||
       newUser.email.length < 2
-    ) {
-      return toast.error('Поля заполнены некорректно.');
+    ) 
+    {
+      return;
     }
     const response = await register(
       newUser.name,

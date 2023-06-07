@@ -8,7 +8,6 @@ import {
 import { CustomContainer } from './styles';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState, ChangeEvent } from 'react';
-import toast from 'react-hot-toast';
 import { login } from '../../lib/api';
 import { useAuth } from '../../hooks/auth/useAuth';
 
@@ -34,7 +33,7 @@ export const Login = () => {
 
   async function submit() {
     if (loginUser.password.trim().length < 3 || loginUser.email.length < 2) {
-      return toast.error('Поля заполнены некорректно.');
+      return;
     }
 
     const response = await login(loginUser.email, loginUser.password);
